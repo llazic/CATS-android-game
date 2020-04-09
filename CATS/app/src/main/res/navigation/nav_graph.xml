@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/entryFragment">
+
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="rs.etf.pmu.cats.fragments.EntryFragment"
+        android:label="EntryFragment" >
+        <action
+            android:id="@+id/action_entryFragment_to_garageFragment"
+            app:destination="@id/garageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/garageFragment"
+        android:name="rs.etf.pmu.cats.fragments.GarageFragment"
+        android:label="garage_fragment"
+        tools:layout="@layout/garage_fragment" >
+        <action
+            android:id="@+id/action_garageFragment_to_fightFragment"
+            app:destination="@id/fightFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fightFragment"
+        android:name="rs.etf.pmu.cats.fragments.FightFragment"
+        android:label="fight_fragment"
+        tools:layout="@layout/fight_fragment" />
+</navigation>

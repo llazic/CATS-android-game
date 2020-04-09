@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="50dp"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/music_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/music_playing"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/check_mark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLAY MUSIC"
+            android:textSize="30dp"
+            android:fontFamily="@font/two_fifty_six_bytes"
+            android:textColor="@color/letterColor"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/control_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:id="@+id/control_active"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/x"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONTROL VEHICLE"
+            android:textSize="30dp"
+            android:fontFamily="@font/two_fifty_six_bytes"
+            android:textColor="@color/letterColor"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

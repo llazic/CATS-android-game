@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorAccent">
+
+    <ImageView
+        android:id="@+id/or_image"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        app:layout_constraintWidth_percent="0.15"
+        android:src="@drawable/or"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pick_existing_image"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:src="@drawable/pick_existing"
+        app:layout_constraintEnd_toStartOf="@+id/or_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/register_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/or_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/nickname_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/nickname"
+        app:layout_constraintBottom_toTopOf="@+id/editText_player_nickname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toEndOf="@+id/or_image"
+        app:layout_constraintTop_toBottomOf="@+id/register_image"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <EditText
+        android:id="@+id/editText_player_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/or_image"
+        app:layout_constraintTop_toBottomOf="@+id/register_image"
+        app:layout_constraintVertical_bias="0.3"
+        android:gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/or_image"
+        app:layout_constraintTop_toBottomOf="@+id/editText_player_nickname"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/or_image"
+        app:layout_constraintTop_toBottomOf="@+id/editText_player_nickname"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"/>
+
+    <TextView
+        android:id="@+id/textViewCurrentPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have to register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/or_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pick_existing_image"
+        app:layout_constraintVertical_bias="0.3"
+        android:textColor="@color/letterColor"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/leftArrow"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:src="@drawable/left_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewCurrentPlayer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pick_existing_image"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintWidth_percent="0.05"/>
+
+    <ImageView
+        android:id="@+id/rightArrow"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:src="@drawable/right_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/or_image"
+        app:layout_constraintStart_toEndOf="@+id/textViewCurrentPlayer"
+        app:layout_constraintTop_toBottomOf="@+id/pick_existing_image"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintWidth_percent="0.05" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
