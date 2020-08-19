@@ -21,10 +21,18 @@
         <action
             android:id="@+id/action_garageFragment_to_fightFragment"
             app:destination="@id/fightFragment" />
+        <action
+            android:id="@+id/action_garageFragment_to_vehicleModificationFragment"
+            app:destination="@id/vehicleModificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/fightFragment"
         android:name="rs.etf.pmu.cats.fragments.FightFragment"
         android:label="fight_fragment"
         tools:layout="@layout/fight_fragment" />
+    <fragment
+        android:id="@+id/vehicleModificationFragment"
+        android:name="rs.etf.pmu.cats.fragments.VehicleModificationFragment"
+        android:label="vehicle_modification_fragment"
+        tools:layout="@layout/vehicle_modification_fragment" />
 </navigation>

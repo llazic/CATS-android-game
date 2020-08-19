@@ -10,22 +10,21 @@ import androidx.room.PrimaryKey;
 public class Player {
 
     @PrimaryKey(autoGenerate = true)
-    private long id;
+    public long id;
+
+    public int gamesWon;
+
+    public int gamesLost;
+
+    public boolean musicPlaying;
+
+    public boolean vehicleControl;
 
     @NonNull
-    private int gamesWon;
+    public String nickname;
 
-    @NonNull
-    private int gamesLost;
-
-    @NonNull
-    private boolean musicPlaying;
-
-    @NonNull
-    private boolean vehicleControl;
-
-    @NonNull
-    private String nickname;
+    //public Long[] boxTimes = {null, null, null, null};
+    public Long box0Time, box1Time, box2Time, box3Time;
 
     public Player(String nickname){
         this.nickname = nickname;
@@ -45,22 +44,6 @@ public class Player {
 
     public String getNickname() {
         return nickname;
-    }
-
-    public int getGamesWon() {
-        return gamesWon;
-    }
-
-    public void setGamesWon(int gamesWon) {
-        this.gamesWon = gamesWon;
-    }
-
-    public int getGamesLost() {
-        return gamesLost;
-    }
-
-    public void setGamesLost(int gamesLost) {
-        this.gamesLost = gamesLost;
     }
 
     public boolean isMusicPlaying() {

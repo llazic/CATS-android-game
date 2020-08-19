@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorAccent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <rs.etf.pmu.cats.customImageViews.VehicleModificationCustomImageView
+        android:id="@+id/vehicle_modification_custom_image_view"
+        android:layout_width="452dp"
+        android:layout_height="198dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <rs.etf.pmu.cats.customImageViews.ViewHolderCustomImageView
+        android:id="@+id/helper_image_view"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:padding="10dp"
+        android:text="BACK"
+        android:textColor="@color/letterColor"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/helper_image_view" />
+
+    <TextView
+        android:id="@+id/component_name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Component:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vehicle_modification_custom_image_view"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/vehicle_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vehicle:"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/component_name_text_view" />
+
+    <TextView
+        android:id="@+id/component_health_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health=/"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintEnd_toStartOf="@+id/vehicle_modification_custom_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/component_name_text_view" />
+
+    <TextView
+        android:id="@+id/component_power_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Power=/"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintEnd_toStartOf="@+id/vehicle_modification_custom_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/component_health_text_view" />
+
+    <TextView
+        android:id="@+id/component_energy_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Energy=/"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintEnd_toStartOf="@+id/vehicle_modification_custom_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/component_power_text_view" />
+
+    <TextView
+        android:id="@+id/vehicle_health_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health=3000"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintEnd_toStartOf="@+id/vehicle_modification_custom_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vehicle_text_view" />
+
+    <TextView
+        android:id="@+id/vehicle_power_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Power=700"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintEnd_toStartOf="@+id/vehicle_modification_custom_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_health_text_view" />
+
+    <TextView
+        android:id="@+id/vehicle_energy_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Energy=29/29"
+        android:fontFamily="@font/two_fifty_six_bytes"
+        android:textColor="@color/letterColor"
+        android:background="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintEnd_toStartOf="@+id/vehicle_modification_custom_image_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vehicle_power_text_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,8 +29,8 @@ public class StatsDialogFragment extends DialogFragment {
         currentPlayerViewModel = ViewModelProviders.of(getActivity()).get(CurrentPlayerViewModel.class);
         Player currentPlayer = currentPlayerViewModel.getCurrentPlayerLiveData().getValue();
 
-        if (currentPlayer.getGamesWon() + currentPlayer.getGamesLost() > 0) {
-            int winRate = (int) ((currentPlayer.getGamesWon() * 100.0) / (currentPlayer.getGamesLost() + currentPlayer.getGamesWon()));
+        if (currentPlayer.gamesWon + currentPlayer.gamesLost > 0) {
+            int winRate = (int) ((currentPlayer.gamesWon * 100.0) / (currentPlayer.gamesLost + currentPlayer.gamesWon));
             //int winRate = (int) ((2 * 100.0) / (3 + 2));
             TextView statsTextView = view.findViewById(R.id.statsTextView);
             statsTextView.setText("Your win rate is " + winRate + "%");

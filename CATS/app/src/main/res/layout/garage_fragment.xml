@@ -177,8 +177,9 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <rs.etf.pmu.cats.customImageViews.GarageCustomImageView
-        android:layout_width="500dp"
-        android:layout_height="225dp"
+        android:id="@+id/garage_custom_image_view"
+        android:layout_width="452dp"
+        android:layout_height="198dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
